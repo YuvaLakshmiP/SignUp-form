@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        #signup{
+            font-size: larger;
+            padding: 2px;
+            font-family: sans-serif;
+        }
+        body{
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        #f1{
+           
+         
+            border-radius: 6px;
+            background-image: url(https://img.freepik.com/premium-vector/flower-background-with-watercolor-effect_664601-18559.jpg?size=626&ext=jpg&ga=GA1.1.1446934089.1720504063&semt=ais_hybrid);
+          
+        }
+       #f2{
+        background-image: url(https://img.freepik.com/premium-photo/abstract-splashed-watercolor-textured-background_469760-2920.jpg?ga=GA1.1.1446934089.1720504063&semt=sph);
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+       
+
+        input[type=text]{
+               justify-content: center;
+                width: 300px;
+                height:20px;
+                border: 2px solid black;
+                border-radius: 6px;
+                
+        }
+        input[type=email]{
+                width: 300px;
+                height:20px;
+                border: 2px solid black;
+                border-radius: 6px;
+        }
+        input[type=number]{
+                width: 300px;
+                height:20px;
+                border: 2px solid black;
+                border-radius: 6px;
+        }
+        input[type=date]{
+                width: 300px;
+                height:20px;
+                border: 2px solid black;
+                border-radius: 6px;
+        }
+        input[type=name ]{
+                width: 300px;
+                height:20px;
+                border: 2px solid black;
+                border-radius: 6px;
+    
+        }
+        select{
+            width: 300px;
+                height:20px;
+                border: 2px solid black;
+                border-radius: 6px;
+        }
+        textarea{
+             border: 2px solid black;
+            border-radius: 6px;
+        }
+        input:hover ,select:hover,textarea:hover{
+            background-color: rgb(161, 180, 180);
+        }
+        #browser{
+            width: 300px;
+             height:20px;
+            border: 2px solid black;
+            border-radius: 6px;
+        }
+        input[type=range ]{
+            width: 300px;
+             height:20px;
+            border: 2px solid black;
+            border-radius: 6px;
+        }
+        legend,label{
+            font-size: medium;
+            font-family:  'Tahoma'
+        }
+       #b1,#b2{
+        background-image: url(https://img.freepik.com/free-vector/realistic-blurred-spring-background_52683-55622.jpg?size=626&ext=jpg&ga=GA1.1.1446934089.1720504063&semt=ais_hybrid);
+        height: 20px;
+       }
+       #flex{
+        display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+       }
+    </style>
+    <script>
+        function update(val){
+            document.getElementById('rangeop').value=val;
+        }
+    </script>
+</head>
+<body>
+    <div id="flex">
+    <form>
+        <center>
+        <fieldset id="f1">
+        <center>
+        <legend id="signup"><strong>SIGN UP FORM</strong></legend>
+    </fieldset>
+    </center>
+    </center></br>
+        <fieldset id="f2">
+         <legend><i class="fas fa-music"></i></legend>
+    </br>
+    <label>NAME:
+    <input type="text" placeholder="write your name" required></br></br></label>
+        <legend>EMAIL:<input type="email" required placeholder="write your email"></legend></br>
+        <legend>USERNAME:<input type="name" required placeholder="write your username"></legend></br>
+        <lable>D.O.B:<input type="date" required></lable></br></br>
+        <legend>Favorite Color:<select required>
+            <option value="red">red</option>
+            <option value="green">green</option>
+            <option value="yellow">yellow</option>
+            <option value="blue">blue</option>
+        </select></legend></br>
+    </br>
+    <label>Gender:
+        <input type="checkbox">Male
+        <input type="checkbox">Female
+    </label></br></br>
+        <legend>Comments:<textarea cols="25" rows="2" placeholder="write your feedback"></textarea></legend></br>
+    </br>
+                      <!--For dropdown button we use datalist-->
+      <legend>Choose your browser from the list:</lable><input list="browsers" name="browser" id="browser" required placeholder="click dropdown">
+            <datalist id="browsers">
+                <option value="chrome">
+                <option value="edge">
+                <option value="safari">
+                <option value="Firebox">
+                <option value="chrome">
+            </datalist>
+        </legend></br>
+    </br>
+    
+        <legend>Range:<input type="range" id="range" name="range"  min="0" max="100" oninput="update(value)">
+          <!--for display output in the range-->
+       <output for="range" id="rangeop">50</output> </legend></br></br>
+       <!--For dropdown button-->
+        <lable for="cars" style="font-family: sans-serif;">Choose a car:</lable>
+            <select id="cars" name="cars">
+            <optgroup label="German cars">
+            <option value="Maverick.">Maverick.</option>
+            <option value="Blaze">Blaze</option>
+        </optgroup>
+        <optgroup label="American cars">
+            <option value="Phoenix">Phoenix</option>
+            <option value="Vortex">Vortex</option>
+        </optgroup>
+        <optgroup label="Indian cars">
+            <option value="Ford">Ford</option>
+            <option value="Toyoto">Toyoto</option>
+        </optgroup>
+        </select></legend></br>
+        </fieldset></br>
+        <center>
+          <button id="b1">Submit</button>
+          <button id="b2">Login</button>
+        </center>
+    </form>
+    </div>
+</body>
+</html>
